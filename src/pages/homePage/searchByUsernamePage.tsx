@@ -1,4 +1,4 @@
-const HomePage = () => {
+const SearchByUsername = () => {
     return (
         <>
             <h1>This is a home page</h1>
@@ -6,4 +6,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default SearchByUsername

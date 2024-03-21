@@ -1,6 +1,6 @@
 import {createBrowserRouter} from "react-router-dom";
 import MainLayout from "../components/layouts/mainLayout.tsx";
-import HomePage from "../pages/homePage/homePage.tsx";
+import SearchByUsername from "../pages/homePage/searchByUsernamePage.tsx";
 
 const Router = createBrowserRouter([
     {
@@ -10,7 +10,7 @@ const Router = createBrowserRouter([
             [
                 {
                     index:true,
-                    element: <HomePage/>
+                    element: <SearchByUsername/>
                 }
             ]
     }
