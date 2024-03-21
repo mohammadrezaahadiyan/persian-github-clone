@@ -1,9 +1,11 @@
-import {Link, Outlet} from "react-router-dom";
+import {Outlet} from "react-router-dom";
+import ResponsiveHeader from "../responsiveHeader/responsiveHeader.tsx";
+import BaseLink from "../base/baseLink.tsx";
 
 const MainLayout = () => {
     return (
         <>
-            <nav className={`bg-[#181818]`}>
+            <nav className={`bg-[#181818] hidden md:block`}>
                 <div className={`container mx-auto`}>
 
                     <div className={`flex relative h-16 items-center justify-between`}>
@@ -15,10 +17,10 @@ const MainLayout = () => {
 
                             <div className={`hidden sm:mr-6 sm:block`}>
                                 <div className={`flex space-x-4`}>
-                                    <Link to={`/`} className={`rounded px-3 py-3 text-sm text-gray-300 transition-colors duration-100 hover:bg-gray-700 hover:text-white`}>جست و جو بر اساس نام کاربری</Link>
-                                    <Link to={`/`} className={`rounded px-3 py-3 text-sm text-gray-300 transition-colors duration-100 hover:bg-gray-700 hover:text-white`}>جست و جو بر اساس مخزن</Link>
-                                    <Link to={`/`} className={`rounded px-3 py-3 text-sm text-gray-300 transition-colors duration-100 hover:bg-gray-700 hover:text-white`}>سایت رسمی Github</Link>
-                                    <Link to={`/`} className={`rounded px-3 py-3 text-sm text-gray-300 transition-colors duration-100 hover:bg-gray-700 hover:text-white`}>دریافت API</Link>
+                                    <BaseLink path={`/`} title={`جست و جو بر اساس نام کاربری`} />
+                                    <BaseLink path={`/`} title={`جست و جو بر اساس مخزن`} />
+                                    <BaseLink path={`/`} title={`سایت رسمی Github`} />
+                                    <BaseLink path={`/`} title={`دریافت API`}/>
                                 </div>
                             </div>
                             
@@ -27,6 +29,8 @@ const MainLayout = () => {
 
                 </div>
             </nav>
+
+            <ResponsiveHeader/>
             <Outlet />
         </>
     )
