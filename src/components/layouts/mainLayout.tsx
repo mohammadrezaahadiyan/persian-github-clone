@@ -1,6 +1,6 @@
 import {Outlet} from "react-router-dom";
 import ResponsiveHeader from "../responsiveHeader/responsiveHeader.tsx";
-import BaseLink from "../base/baseLink.tsx";
+import AppLink from "../core/appLink.tsx";
 
 const MainLayout = () => {
     return (
@@ -17,10 +17,10 @@ const MainLayout = () => {
 
                             <div className={`hidden sm:mr-6 sm:block`}>
                                 <div className={`flex space-x-4`}>
-                                    <BaseLink path={`/`} title={`جست و جو بر اساس نام کاربری`} />
-                                    <BaseLink path={`/`} title={`جست و جو بر اساس مخزن`} />
-                                    <BaseLink path={`/`} title={`سایت رسمی Github`} />
-                                    <BaseLink path={`/`} title={`دریافت API`}/>
+                                    <AppLink path={`/`} title={`جست و جو بر اساس نام کاربری`} />
+                                    <AppLink path={`/`} title={`جست و جو بر اساس مخزن`} />
+                                    <AppLink path={`/`} title={`سایت رسمی Github`} />
+                                    <AppLink path={`/`} title={`دریافت API`}/>
                                 </div>
                             </div>
                             

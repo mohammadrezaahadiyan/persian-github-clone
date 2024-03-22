@@ -1,13 +1,8 @@
 import {Link} from "react-router-dom";
-import {ReactNode} from "react";
+import IAppLinkProps from "../../interfaces/appLinkProps.ts";
+i
 
-interface IBaseLinkProps {
-    title: string | ReactNode;
-    additionalClasses?: string;
-    path: string;
-}
-
-const BaseLink = ({title, additionalClasses, path}:IBaseLinkProps) => {
+const AppLink = ({title, additionalClasses, path}:IAppLinkProps) => {
 
     return (
         <>
@@ -16,4 +11,4 @@ const BaseLink = ({title, additionalClasses, path}:IBaseLinkProps) => {
     )
 }
 
-export default BaseLink;
+export default AppLink;
