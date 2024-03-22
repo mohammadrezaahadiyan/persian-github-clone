@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom";
 import IAppLinkProps from "../../interfaces/appLinkProps.ts";
-i
 
 const AppLink = ({title, additionalClasses, path}:IAppLinkProps) => {
 
