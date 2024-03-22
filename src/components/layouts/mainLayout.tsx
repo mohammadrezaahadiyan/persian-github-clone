@@ -1,6 +1,6 @@
 import {Outlet} from "react-router-dom";
 import ResponsiveHeader from "../responsiveHeader/responsiveHeader.tsx";
-import AppLink from "../core/appLink.tsx";
+import AppLink from "../base/appLink.tsx";
 
 const MainLayout = () => {
     return (

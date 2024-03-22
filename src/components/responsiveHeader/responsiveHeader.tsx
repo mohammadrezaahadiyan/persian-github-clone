@@ -1,5 +1,5 @@
 import {FaDev, FaGithub} from "react-icons/fa";
-import AppLink from "../core/appLink.tsx";
+import AppLink from "../base/appLink.tsx";
 import {RiGitRepositoryFill, RiUserSearchFill} from "react-icons/ri";
 
 const ResponsiveHeader = () => {

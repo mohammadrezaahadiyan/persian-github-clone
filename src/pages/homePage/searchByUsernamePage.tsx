@@ -1,4 +1,4 @@
-import AppBox from "../../components/core/appBox.tsx";
+import AppBox from "../../components/base/appBox.tsx";
 
 const SearchByUsername = () => {
     return (

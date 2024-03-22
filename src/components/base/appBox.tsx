@@ -1,5 +1,5 @@
 import {Box, TextField} from "@mui/material";
-import IAppBoxProps from "../../interfaces/appBoxProps.ts";
+import IAppBoxProps from "../../core/interfaces/appBoxProps.ts";
 import AppLink from "./appLink.tsx";
 
 const AppBox = ({title, description, image, inputText, inputId}: IAppBoxProps) => {
