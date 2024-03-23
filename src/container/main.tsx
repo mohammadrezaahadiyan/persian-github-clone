@@ -6,6 +6,8 @@ import {createTheme, ThemeProvider} from "@mui/material";
 import createCache from "@emotion/cache";
 import rtlPlugin from "stylis-plugin-rtl";
 import {CacheProvider} from "@emotion/react";
+import {Provider} from "react-redux";
+import {store} from "../core/store";
 
 const theme = createTheme({
     direction: 'rtl',
@@ -20,7 +22,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <CacheProvider value={cacheRtl}>
             <ThemeProvider theme={theme}>
-                <App />
+                <Provider store={store}>
+                    <App />
+                </Provider>
             </ThemeProvider>
         </CacheProvider>
     </React.StrictMode>

@@ -12,7 +12,8 @@ export const formDataSlice = createSlice({
     name: 'formData',
     initialState,
     reducers: {
-        logger:(state) => {
+        logger:(state, inputValue) => {
+            state.searchParam = inputValue.payload
             console.log(state.searchParam)
         }
     }
