@@ -1,8 +1,8 @@
 import {Octokit} from "@octokit/core";
 const octokit = new Octokit({
-    auth: "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"
+    auth: "your tokken"
 });
-
+//use https://github.com/settings/tokens/new to get token
 octokit.request("GET /users/{username}", {
     username: 'username'
 })
