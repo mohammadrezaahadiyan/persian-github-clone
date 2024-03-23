@@ -1,10 +1,11 @@
+import {ReactNode} from "react";
+
 interface IAppBoxProps {
 
     title: string;
     description?: string;
     image: string;
-    inputText: string;
-    inputId: string;
+    form: ReactNode
 }
 
 export default IAppBoxProps;

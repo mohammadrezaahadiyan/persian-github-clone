@@ -1,8 +1,7 @@
-import {Box, TextField} from "@mui/material";
+import {Box} from "@mui/material";
 import IAppBoxProps from "../../core/interfaces/appBoxProps.ts";
-import AppLink from "./appLink.tsx";
 
-const AppBox = ({title, description, image, inputText, inputId}: IAppBoxProps) => {
+const AppBox = ({title, description, image, form}: IAppBoxProps) => {
 
     return (
         <>
@@ -33,17 +32,8 @@ const AppBox = ({title, description, image, inputText, inputId}: IAppBoxProps) =
                           src={`/src/assets/images/${image}`} alt={image}/>
                  </div>
 
-                 <form dir={`rtl`} className={`flex gap-4 my-5`}>
-                     <TextField
-                         dir={`rtl`}
-                         id={inputId}
-                         label={inputText}
-                         size={`small`}
-                     />
-                     <button>
-                         <AppLink title={`جست و جو`} path={'/'} additionalClasses={`!bg-[#181818] !py-2.5`}/>
-                     </button>
-                 </form>
+                 {form}
+
              </Box>
          </div>
         </>
