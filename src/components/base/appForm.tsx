@@ -1,34 +1,38 @@
 import {TextField} from "@mui/material";
-import AppLink from "./appLink.tsx";
 import IAppFormProps from "../../core/interfaces/appFormProps.ts";
-import {useDispatch, useSelector} from "react-redux";
-import {AppDispatch, RootState} from "../../core/store";
-import {logger} from "../../core/store/formData.ts";
+import {useFormik} from "formik";
+import {schema} from "../../core/validations/searchForm.validation.ts";
 
+const AppForm = ({inputText}: IAppFormProps) => {
 
-const AppForm = ({inputId, inputText}: IAppFormProps) => {
+    const formik = useFormik({
+        initialValues:{
+            searchValue: ""
+        },
 
-    const dispatch = useDispatch<AppDispatch>()
-    const formValue = useSelector<RootState, string>((state) => state.formData.searchParam)
-
-    const formDataHandler = (inputValue:string) => {
-        console.log('form value', formValue)
-        dispatch(logger(inputValue))
-    }
+        validationSchema: schema,
+        onSubmit: (values) => {console.log(values)}
+    })
 
     return (
         <>
-            <form dir={`rtl`} className={`flex gap-4 my-5`}>
+            <form onSubmit={formik.handleSubmit} autoComplete={`off`}  className={`my-5`}>
                 <TextField
+                    error={!!formik.errors.searchValue}
                     dir={`rtl`}
-                    id={inputId}
                     label={inputText}
+                    type="text"
+                    id={`searchValue`}
                     size={`small`}
-                    onChange={e => (formDataHandler(e.target.value))}
+                    value={formik.values.searchValue}
+                    onChange={formik.handleChange}
                 />
-                <button>
-                    <AppLink title={`جست و جو`} path={'/'} additionalClasses={`!bg-[#181818] !py-2.5`}/>
+                <button type={`submit`} className={`rounded mr-4 px-3 py-2.5 text-sm text-gray-300 transition-colors duration-100 bg-gray-700 hover:bg-gray-800 hover:text-white`}>
+                    جست و جو
                 </button>
+                <div className={`error-msg`}>
+                    {formik.errors.searchValue || <span>{formik.errors.searchValue}</span>}
+                </div>
             </form>
         </>
     )

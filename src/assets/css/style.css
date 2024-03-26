@@ -5,3 +5,8 @@ html body input button label{
 .muirtl-1pysi21-MuiFormLabel-root-MuiInputLabel-root, .muirtl-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
     font-family: iranyekan !important;
 }
+
+.error-msg {
+    font-size: 10px;
+    color: red;
+}

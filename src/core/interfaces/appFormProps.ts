@@ -1,5 +1,4 @@
 interface IAppFormProps {
-    inputId: string,
     inputText: string,
 }
 

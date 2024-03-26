@@ -8,7 +8,7 @@ const SearchByUsername = () => {
                 <div className={`flex items-center m-0 h-[100vh]`}>
                     <div className={`w-[85w] m-auto overflow-auto`}>
                         <AppBox title={`عنوان`} image={`logo.jpeg`} description={`کاربر مد نظر خود را بر اساس نام کاربری جست و جو کنید.`}
-                                form={<AppForm inputId={'searchByUsername'} inputText={'نام کاربری'} key={`searchByUsernameBox`} />}
+                                form={<AppForm inputText={'نام کاربری'} key={`searchByUsernameBox`} />}
                         key={`searchByUsernameBox`}
                         />
                     </div>
