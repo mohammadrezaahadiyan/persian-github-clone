@@ -1,8 +1,8 @@
 import {configureStore} from "@reduxjs/toolkit";
-
+import userDataReducer from "./userProfile.ts"
 export const store = configureStore({
     reducer:{
-
+        userData: userDataReducer
     }
 })
 
